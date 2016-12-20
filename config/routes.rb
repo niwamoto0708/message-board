@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   root 'messages#index'
+  # get 'messages/index'#, to: 'message#inex'
+  # HTTPメソッド（GET, POST, PATCH, DELETE)
+  # URL (URI): 
+  # コントローラー名
+  # アクション名
+  resources :messages, only: [:create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
